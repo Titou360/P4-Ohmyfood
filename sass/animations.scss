@@ -1,0 +1,91 @@
+@import "../style/objects/mixin.scss";
+@import "../style/variables.scss";
+
+
+/**** Heart of favorites animation *****/
+.card__heart {
+  &--index, &--pages {
+  width: 22px;
+  height: 21px;
+  font-size: 30px;
+  padding: 0;
+  @include flexMid;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  margin-right: 25px;
+
+  &--index {
+    padding : 23px 250px auto auto;
+  }
+
+  &--pages {
+    margin-left: 120px;
+  }
+
+  i {
+      position: absolute;
+
+      &:hover {
+          opacity: 0;
+      }
+  }
+
+  .fa-solid {
+      opacity: 0;
+
+      /*&:active { If you want to display heart animation by clicking
+          opacity: 1;
+          background: linear-gradient(0deg,$main-color,$sixth-color);
+          transition: all 0.5s;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+      }*/
+
+      &:hover { /*If you want to display heart animation by hovering */
+          opacity: 1;
+          background: linear-gradient(0deg,$main-color,$sixth-color);
+          transition: all 0.5s;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+      }
+  }
+  &--menu {
+    padding-left: 24px;
+  }
+}
+
+.animation--delay {
+  animation-name: fadein 2s;
+  animation-timing-function: cubic-bezier(.35,.02,.71,1.01);
+  animation-fill-mode: both;
+  transform: scale(0);
+ 
+  
+  &__starters {
+    animation-delay: 250mss;
+  }
+
+  &__plates {
+    animation-delay: 750ms;
+  }
+
+  &__desserts {
+    animation-delay: 1250msms;
+  }
+
+}
+
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+}

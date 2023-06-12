@@ -1,0 +1,378 @@
+@import "../style/variables.scss"; //OUI
+@import "../style/objects/mixin.scss"; //OUI
+@import "animations.scss"; 
+@import "loader.scss";
+@import "mediaqueries.scss";
+@import "header.scss";
+@import "restaurants.scss"; //OUI
+@import "../style/objects/button2.scss";
+
+
+/**** Variables for header ****/
+.header {
+    @include heading-shadow;
+    @include flexMid;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+
+    &--iconGoback::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f060";
+        width: 17px;
+        height: 16px;
+        color : $footer-BG-color;
+        font-size: 17px;
+        left: 20%;
+        top: 20%;
+    }
+
+    &--logo {
+        font-family: $main-font;
+        font-size: 2rem;
+        font-weight: 500;
+        margin : 0 auto;
+        font-style: italic;
+        color: $main-title-color;
+        margin: 14px auto 5px auto;
+
+        &__svg {
+            width: 200px;
+            height: 34px;
+            margin: 30px auto;
+        }
+    }
+    
+}
+
+/**** Variables for "location class" area ****/
+
+.location-form {
+    @include flexMid;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    background-color: #EAEAEA;
+    i {
+        @include flexMid;
+        padding-right: 17px;
+    }
+    input { 
+        background-color: #EAEAEA;
+        border: none;
+        width: 109px;
+        height: 19px;
+    }
+    ::placeholder {
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        color: #353535;
+    }
+
+}
+
+.bold-700 {
+    font-weight: 700;
+}
+.booking {
+    background-color: #f7f7f7;
+    padding: 2rem; 
+
+    p {
+        font-weight: 300;
+        font-size: 18px;
+        text-align: center
+    }
+    &__ul {
+        list-style-type: none;
+        @include flexColumn;
+        align-items: center;
+        gap: 30px;
+
+        li {
+            text-align: center;
+        }
+    }
+
+}
+
+
+
+
+
+
+/**** Variables for "main-container id" area ****/
+
+#main-container {
+    width: 100%;
+    margin: auto 0;
+}
+
+/*#main-container {
+
+    .location { /* Switch on this option if you want just a town display and no a form be careful with the html :)/*
+    @include flexMid;
+    background-color: #EAEAEA;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem;
+
+    .location__icon {
+        margin: 0 1rem 0 0;
+    }
+}*/
+
+
+/**** Variables for "tutorial class" area ****/
+    .tutorial {
+        margin: 0 auto;
+        width: 90%;
+        padding-bottom: 68px;
+
+               
+        .container {
+            margin: 0 auto;
+
+            ul {
+                list-style-type: none;
+                counter-reset: ListingCounter;
+                display: flex;
+                align-items: stretch;
+                justify-content: space-around;
+                flex-direction: column;
+                
+                gap: 50px;
+                padding-top: 24px;
+
+                li {
+                    padding : 24px 24px 20px;
+                    border-radius : 25px;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    background-color: #F6F6F6;
+                    @include btn-shadow;
+                    align-items: center;
+
+                    &:nth-child(3) i {
+                        color: $main-color;
+                    }
+                       
+
+                    &:hover {
+                        @include card-shadow;
+                        i {
+                        color: $main-color;
+                        }
+                    }
+                 
+
+                    &::before {
+                        counter-increment: ListingCounter 1;
+                        content : counter(ListingCounter);
+                        @include flexMid;
+                        color : #f2f2f2;
+                        border-radius: 25px;
+                        background-color: $main-color;
+                        width: 15px;
+                        height: 15px;
+                        padding: 5px;
+                        position: relative;
+                        left: -30px;
+                    }
+                    i {
+                        color : $tuto-icon-color;
+                        padding-right: 15px;
+                    }
+
+                    span {
+                        font-weight: 500;
+                    }
+                }
+            }
+
+        }
+    }
+
+/**** Variables for "places class" area ****/
+
+    .places {
+        background-color: #F7F7F7;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+
+        .container {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+
+        .restaurants-list {
+            width: 100%;
+            display: grid;
+            list-style-type: none;
+            row-gap : 60px;
+            column-gap: 91px;
+            grid-template-columns: 1fr;
+
+            
+
+            &__item {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                &:hover {
+                @include card-shadow;
+            }
+            }
+
+        }
+
+        .restaurant-card {
+            background-color: #ffffff;
+            border-radius:  25px;
+            position: relative;
+            @include card-shadow;
+
+            &__footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &__description {
+                margin: 0;
+                padding-left :13px;
+                padding-top: 16px;
+                padding-bottom: 12px;
+            }
+
+            &__title {
+                font-weight: 700;
+                font-size: 18px;
+                margin: 0;
+                padding: 0;
+            }
+
+            &__location {
+                    font-size: 17px;
+                    font-weight: 300;
+                    padding-bottom: 5px;
+                    margin: 0;
+            }
+
+            &__badge {
+                position: absolute;
+                background: $second-color;
+                color: $third-color;
+                top: 1rem;
+                right: 1rem;
+                width: 80px;
+                height: 29px;
+                @include flexMid;
+                font-size: 14px;
+                font-weight: 500;
+                border-radius: 2px;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+            }
+
+        }            
+
+        img { 
+            width: 100%;
+            height: 231px;
+            border-radius: 1rem 1rem 0 0;
+            object-fit: cover;
+        }
+
+    }
+
+/**** Variables for Footer ****/
+
+footer {
+    display: flex;    
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #353535;
+    color: #ffffff;
+    padding-left: 50px;
+
+    .footer--logo {
+        font-family: $main-font;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+        font-style: italic;
+        display: flex;
+        align-items: center;
+
+    }
+        a {
+            cursor: pointer;
+            color:#ffffff;
+            font-size: 16px;
+            font-weight: 400;
+
+        }
+        a:visited {
+            color: #ffffff;
+        }
+
+    ul { 
+        padding-bottom: 22px;
+        font-size: 16px;
+        font-weight: 500;
+        list-style-type: none;
+
+        li {
+            padding: 0 0 7px 0;
+            i {
+                padding-right : 10px;
+            }
+        }
+    }
+
+    .box-footer-media {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+
+    }   
+    
+    .box-footer {
+        @include flexRow;
+        align-items: flex-start;
+        gap: 7px;
+      }
+      
+        .fa-utensils {
+          &::before {
+          font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f2e7";
+          }
+         }
+        
+       .fa-handshake-angle {
+         &::before {
+          font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f4c4";
+          }
+        }
+    
+    .footer--partners {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 7px;
+
+        div {
+            padding-right: 0.50rem;
+        }
+    }
+
+}

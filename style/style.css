@@ -1,0 +1,1123 @@
+/* Define standard variables and values for website */
+/*** Fonts ***/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Shrikhand&display=swap");
+/*** Website main Colours ***/
+/*** Icon colour ***/
+/*** Others Colours ***/
+/*** Main variables of Website ***/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Shrikhand&display=swap");
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/***** Padding & Margin *****/
+/***** Flex & Grid *****/
+/***** Button  *****/
+/***** Mixin Shadows *****/
+/***** Padding & Margin *****/
+/***** Flex & Grid *****/
+/***** Button  *****/
+/***** Mixin Shadows *****/
+/* Define standard variables and values for website */
+/*** Fonts ***/
+/*** Website main Colours ***/
+/*** Icon colour ***/
+/*** Others Colours ***/
+/*** Main variables of Website ***/
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**** Heart of favorites animation *****/
+.card__heart--index, .card__heart--pages {
+  width: 22px;
+  height: 21px;
+  font-size: 30px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  margin-right: 25px;
+}
+.card__heart--index--index, .card__heart--pages--index {
+  padding: 23px 250px auto auto;
+}
+.card__heart--index--pages, .card__heart--pages--pages {
+  margin-left: 120px;
+}
+.card__heart--index i, .card__heart--pages i {
+  position: absolute;
+}
+.card__heart--index i:hover, .card__heart--pages i:hover {
+  opacity: 0;
+}
+.card__heart--index .fa-solid, .card__heart--pages .fa-solid {
+  opacity: 0;
+  /*&:active { If you want to display heart animation by clicking
+      opacity: 1;
+      background: linear-gradient(0deg,$main-color,$sixth-color);
+      transition: all 0.5s;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }*/
+}
+.card__heart--index .fa-solid:hover, .card__heart--pages .fa-solid:hover { /*If you want to display heart animation by hovering */
+  opacity: 1;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  transition: all 0.5s;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card__heart--index--menu, .card__heart--pages--menu {
+  padding-left: 24px;
+}
+.card__heart .animation--delay {
+  animation-name: fadein 2s;
+  animation-timing-function: cubic-bezier(0.35, 0.02, 0.71, 1.01);
+  animation-fill-mode: both;
+  transform: scale(0);
+}
+.card__heart .animation--delay__starters {
+  animation-delay: 250mss;
+}
+.card__heart .animation--delay__plates {
+  animation-delay: 750ms;
+}
+.card__heart .animation--delay__desserts {
+  animation-delay: 1250msms;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Define standard variables and values for website */
+/*** Fonts ***/
+/*** Website main Colours ***/
+/*** Icon colour ***/
+/*** Others Colours ***/
+/*** Main variables of Website ***/
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/***** Padding & Margin *****/
+/***** Flex & Grid *****/
+/***** Button  *****/
+/***** Mixin Shadows *****/
+.loader--group {
+  z-index: 5;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  inset: 0;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  animation: goodbyeloader 200ms 4000ms forwards;
+}
+.loader--group__one, .loader--group__two {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.loader--group__one {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  padding-bottom: 40px;
+  opacity: 0;
+  animation: fade-in 2s ease forwards 2s, spin 500ms linear 3150ms forwards;
+}
+.loader--group__two {
+  gap: 5px;
+  font-family: "Font Awesome 5 free";
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.load--item {
+  border: 3px solid black;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  padding: 15px;
+}
+
+.item__devices::before {
+  content: "\f3cd";
+  opacity: 0;
+  padding: 2px;
+  animation: fadein 1s ease-in-out forwards;
+  color: #7E7E7E;
+}
+
+.item__location::before {
+  content: "\f3c5";
+  opacity: 0;
+  padding: 2px;
+  animation: fade-in 1s ease-in-out forwards;
+  color: #99E2D0;
+}
+
+.item__store::before {
+  content: "\f54e";
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards;
+  color: #9356DC;
+}
+
+.item__list::before {
+  content: "\f0ca";
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards;
+  color: #003A68;
+}
+
+.item__ustensils::before {
+  content: "\f2e7";
+  opacity: 0;
+  padding: 2px;
+  animation: fade-in 1s ease-in-out forwards;
+  color: #FF79DA;
+}
+
+.slide--delay {
+  height: 200px;
+}
+.slide--delay__1000 {
+  animation: fade-in 1s ease-in-out forwards, slideFromBottom 1s cubic-bezier(0.65, -0.18, 0.35, 1.56), spin 1s linear 1s forwards;
+}
+.slide--delay__1250 {
+  animation: fade-in 1s ease-in-out forwards, slideFromBottom 1s cubic-bezier(0.65, -0.18, 0.35, 1.56) 250ms, spin 1s linear 1250ms forwards, spin-delayed 1s linear 1600ms forwards;
+}
+.slide--delay__1500 {
+  animation: fade-in 1s ease-in-out forwards, slideFromBottom 1000ms cubic-bezier(0.65, -0.18, 0.35, 1.56) 500ms, spin 1s linear 1500ms forwards, spin-delayed 1s linear 2400ms forwards;
+}
+.slide--delay__1750 {
+  animation: fade-in 1s ease-in-out forwards, slideFromBottom 1000ms cubic-bezier(0.65, -0.18, 0.35, 1.56) 750ms, spin 1s linear 1750ms forwards, spin-delayed 1s linear 3000ms forwards;
+}
+.slide--delay__2000 {
+  animation: fade-in 1s ease-in-out forwards, slideFromBottom 1000ms cubic-bezier(0.65, -0.18, 0.35, 1.56) 1000ms, spin 1s linear 2s forwards, spin-delayed 1s linear 3800ms forwards;
+}
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes goodbyeloader {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+/*** Media Queries Loader ***/
+@media screen and (min-width: 768px) {
+  .loader--group__one {
+    font-size: 40px;
+  }
+  .loader--group__two {
+    gap: 30px;
+    font-size: 50px;
+  }
+  .item__devices::before, .item__location::before, .item__ustensils::before {
+    padding: 5px;
+  }
+}
+/*** Media Queries Index ***/
+@media screen and (min-width: 768px) {
+  main .places .restaurants-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/*** Media Queries index : Tutorial ***/
+@media screen and (min-width: 768px) {
+  main .tutorial .container ul {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+}
+/*** Media Queries Restaurant pages ***/
+/*** Media Queries Footer  ***/
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+  }
+  footer a {
+    padding-top: 7px;
+  }
+}
+.box-footer-media {
+  flex-direction: row;
+}
+
+.footer--partners {
+  flex-direction: row;
+}
+
+/***** Padding & Margin *****/
+/***** Flex & Grid *****/
+/***** Button  *****/
+/***** Mixin Shadows *****/
+/* Define standard variables and values for website */
+/*** Fonts ***/
+/*** Website main Colours ***/
+/*** Icon colour ***/
+/*** Others Colours ***/
+/*** Main variables of Website ***/
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/***** Padding & Margin *****/
+/***** Flex & Grid *****/
+/***** Button  *****/
+/***** Mixin Shadows *****/
+.place__menu {
+  margin-top: -5rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: -5rem auto auto auto;
+}
+@media screen {
+  .place__menu {
+    max-width: 768px;
+    width: 100%;
+  }
+}
+.place__menu .animation--delay {
+  opacity: 0;
+  /* @keyframes fadeIn duration | timing-function | delay | name */
+}
+.place__menu .animation--delay__starters {
+  animation: 2s cubic-bezier(1, 0.31, 0.17, 1.01) 500ms fadeIn forwards;
+}
+.place__menu .animation--delay__plates {
+  animation: 2s cubic-bezier(1, 0.31, 0.17, 1.01) 1000ms fadeIn forwards;
+}
+.place__menu .animation--delay__desserts {
+  animation: 2s cubic-bezier(1, 0.31, 0.17, 1.01) 1500ms fadeIn forwards;
+}
+
+.place__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 51px;
+  margin-bottom: 40px;
+  gap: 24px;
+}
+
+.main {
+  border-top-left-radius: 20px;
+  margin: 0 auto;
+}
+.main h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 28px;
+  font-style: italic;
+  margin: 0;
+}
+.main .image-back {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 383px;
+  background-position: center;
+  background-size: cover;
+}
+.main .palette {
+  background-image: url(../assets/images/restaurants/la_palette_du_gout.jpg);
+}
+.main .enchantee {
+  background-image: url(../assets/images/restaurants/la_note_enchantee.jpg);
+}
+.main .francaise {
+  background-image: url(../assets/images/restaurants/a_la_francaise.jpg);
+}
+.main .delices {
+  background-image: url(../assets/images/restaurants/le_delices_des_sens.jpg);
+}
+
+.menus h3 {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: 300;
+  margin: 1.2rem 0;
+  font-size: 1.2rem;
+  padding-left: 9rem;
+}
+@media screen {
+  .menus h3 {
+    max-width: 768px;
+    padding-left: 13px;
+  }
+}
+.menus h3:after {
+  content: "";
+  background: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  left: 9rem;
+  width: 3rem;
+  height: 0.25rem;
+}
+@media screen {
+  .menus h3:after {
+    max-width: 768px;
+    left: 13px;
+  }
+}
+
+.menu {
+  margin: 0 128px 10px 128px;
+}
+@media screen {
+  .menu {
+    max-width: 768px;
+    margin: 0px 13px;
+  }
+}
+.menu h1 {
+  padding-top: 31px;
+  padding-bottom: 42px;
+  margin-left: 14px;
+}
+.menu ul {
+  list-style-type: none;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 95%;
+  margin-bottom: 15px;
+  margin-top: 12px;
+  padding: 12px 15px;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.menu a {
+  margin-top: 50px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.menu .menu__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background: #fff;
+  border-radius: 15px;
+  padding: 12px 0px 12px 15px;
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 100%;
+  margin-bottom: 12px;
+}
+.menu .menu__item--text {
+  font-size: 15px;
+  font-weight: 300;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: hidden;
+}
+.menu .menu__item--text h4 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+}
+.menu .menu__item--text .descprice {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.menu .menu__item--text .descprice .desc {
+  white-space: nowrap;
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+.menu .menu__item--text .descprice .price {
+  flex-shrink: 0;
+  font-weight: 700;
+  margin-right: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.menu .menu__item--check {
+  background: #99E2D0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 750ms;
+}
+.menu .menu__item--icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6.25rem;
+  transform: rotateZ(360deg);
+  transition-duration: 1250ms;
+}
+.menu .menu__item--icon i {
+  color: #99E2D0;
+}
+.menu .menu__item:hover .menu__item--check {
+  margin-right: -1px;
+}
+.menu .menu__item:hover .menu__item--icon {
+  transform: rotate(0);
+}
+.menu .menu__item--price {
+  font-weight: 700;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 16px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.image--back__index {
+  background-repeat: no-repeat;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 231px;
+  background-size: cover;
+}
+
+.palette {
+  background-image: url(../assets/images/restaurants/la_palette_du_gout.jpg);
+}
+
+.enchantee {
+  background-image: url(../assets/images/restaurants/la_note_enchantee.jpg);
+}
+
+.francaise {
+  background-image: url(../assets/images/restaurants/a_la_francaise.jpg);
+}
+
+.delices {
+  background-image: url(../assets/images/restaurants/le_delices_des_sens.jpg);
+}
+
+/***** Padding & Margin *****/
+/***** Flex & Grid *****/
+/***** Button  *****/
+/***** Mixin Shadows *****/
+/* Define standard variables and values for website */
+/*** Fonts ***/
+/*** Website main Colours ***/
+/*** Icon colour ***/
+/*** Others Colours ***/
+/*** Main variables of Website ***/
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**** Variables for button ****/
+.btn {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(93deg, #9356DC -11%, #FF79DA 123%); /* fallback for old browsers + W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: -webkit-linear-gradient(93deg, #9356DC -11%, #FF79DA 123%);
+  transform: matrix(1, 0, 0, 1, 0, 0); /* Chrome 10-25, Safari 5.1-6 */
+  border-radius: 25px;
+  width: 230px;
+  height: 50px;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.btn a {
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.btn__cards {
+  padding: 0.5rem 0;
+}
+
+.btn-order {
+  margin: 40px auto;
+}
+
+/**** Variables for header ****/
+.header {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+.header--iconGoback::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f060";
+  width: 17px;
+  height: 16px;
+  color: #353535;
+  font-size: 17px;
+  left: 20%;
+  top: 20%;
+}
+.header--logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 auto;
+  font-style: italic;
+  color: #101010;
+  margin: 14px auto 5px auto;
+}
+.header--logo__svg {
+  width: 200px;
+  height: 34px;
+  margin: 30px auto;
+}
+
+/**** Variables for "location class" area ****/
+.location-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0 auto;
+  background-color: #EAEAEA;
+}
+.location-form i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 17px;
+}
+.location-form input {
+  background-color: #EAEAEA;
+  border: none;
+  width: 109px;
+  height: 19px;
+}
+.location-form ::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #353535;
+}
+
+.bold-700 {
+  font-weight: 700;
+}
+
+.booking {
+  background-color: #f7f7f7;
+  padding: 2rem;
+}
+.booking p {
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+}
+.booking__ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.booking__ul li {
+  text-align: center;
+}
+
+/**** Variables for "main-container id" area ****/
+#main-container {
+  width: 100%;
+  margin: auto 0;
+}
+
+/*#main-container {
+
+    .location { /* Switch on this option if you want just a town display and no a form be careful with the html :)/*
+    @include flexMid;
+    background-color: #EAEAEA;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem;
+
+    .location__icon {
+        margin: 0 1rem 0 0;
+    }
+}*/
+/**** Variables for "tutorial class" area ****/
+.tutorial {
+  margin: 0 auto;
+  width: 90%;
+  padding-bottom: 68px;
+}
+.tutorial .container {
+  margin: 0 auto;
+}
+.tutorial .container ul {
+  list-style-type: none;
+  counter-reset: ListingCounter;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 50px;
+  padding-top: 24px;
+}
+.tutorial .container ul li {
+  padding: 24px 24px 20px;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  align-items: center;
+}
+.tutorial .container ul li:nth-child(3) i {
+  color: #9356DC;
+}
+.tutorial .container ul li:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.tutorial .container ul li:hover i {
+  color: #9356DC;
+}
+.tutorial .container ul li::before {
+  counter-increment: ListingCounter 1;
+  content: counter(ListingCounter);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f2f2f2;
+  border-radius: 25px;
+  background-color: #9356DC;
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+  position: relative;
+  left: -30px;
+}
+.tutorial .container ul li i {
+  color: #7E7E7E;
+  padding-right: 15px;
+}
+.tutorial .container ul li span {
+  font-weight: 500;
+}
+
+/**** Variables for "places class" area ****/
+.places {
+  background-color: #F7F7F7;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+.places .container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.places .restaurants-list {
+  width: 100%;
+  display: grid;
+  list-style-type: none;
+  row-gap: 60px;
+  column-gap: 91px;
+  grid-template-columns: 1fr;
+}
+.places .restaurants-list__item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.places .restaurants-list__item:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.places .restaurant-card {
+  background-color: #ffffff;
+  border-radius: 25px;
+  position: relative;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.places .restaurant-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.places .restaurant-card__description {
+  margin: 0;
+  padding-left: 13px;
+  padding-top: 16px;
+  padding-bottom: 12px;
+}
+.places .restaurant-card__title {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+.places .restaurant-card__location {
+  font-size: 17px;
+  font-weight: 300;
+  padding-bottom: 5px;
+  margin: 0;
+}
+.places .restaurant-card__badge {
+  position: absolute;
+  background: #99E2D0;
+  color: #008766;
+  top: 1rem;
+  right: 1rem;
+  width: 80px;
+  height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+.places img {
+  width: 100%;
+  height: 231px;
+  border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
+}
+
+/**** Variables for Footer ****/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #353535;
+  color: #ffffff;
+  padding-left: 50px;
+}
+footer .footer--logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+footer a {
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+footer a:visited {
+  color: #ffffff;
+}
+footer ul {
+  padding-bottom: 22px;
+  font-size: 16px;
+  font-weight: 500;
+  list-style-type: none;
+}
+footer ul li {
+  padding: 0 0 7px 0;
+}
+footer ul li i {
+  padding-right: 10px;
+}
+footer .box-footer-media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer .box-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 7px;
+}
+footer .fa-utensils::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f2e7";
+}
+footer .fa-handshake-angle::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f4c4";
+}
+footer .footer--partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 7px;
+}
+footer .footer--partners div {
+  padding-right: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

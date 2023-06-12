@@ -1,0 +1,59 @@
+/***** Padding & Margin *****/
+
+@mixin pad-mag-0 {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin pad-2-1rem {
+    padding: 32px 16px;
+}
+
+/***** Flex & Grid *****/
+@mixin flexMid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+/***** Button  *****/ 
+
+@mixin btn-gradients {
+    background-image: linear-gradient(93deg, $main-color -11%, $sixth-color 123%);  /* fallback for old browsers + W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: -webkit-linear-gradient(93deg, $main-color -11%, $sixth-color 123%);
+    transform : matrix(1, 0, 0, 1, 0, 0); /* Chrome 10-25, Safari 5.1-6 */
+
+}
+@mixin btn-radius {
+    border-radius: 25px;
+}
+
+/***** Mixin Shadows *****/ 
+@mixin heading-shadow {
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.15);
+    -moz-box-shadow : 0 2px 4px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.15);    
+}
+
+@mixin btn-shadow {
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+    -moz-box-shadow : 0 4px 10px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.25);  
+}
+
+@mixin card-shadow {
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    -moz-box-shadow : 0 4px 15px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 4px 15px rgba(0,0,0,0.1);  
+}

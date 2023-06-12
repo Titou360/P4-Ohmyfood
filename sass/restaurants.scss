@@ -1,0 +1,298 @@
+@import "../style/pages/background.scss";
+@import "../style/objects/mixin.scss";
+
+.place__menu {
+    margin-top: -5rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color:#f7f7f7;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: -5rem auto auto auto;
+
+    @media screen {max-width: 768px;
+    width: 100%;
+
+    }
+
+    .animation--delay {
+
+        opacity: 0;
+        /* @keyframes fadeIn duration | timing-function | delay | name */
+
+        &__starters {
+        animation: 2s cubic-bezier(1,.31,.17,1.01) 500ms fadeIn forwards;
+        }
+
+        &__plates {
+        animation: 2s cubic-bezier(1,.31,.17,1.01) 1000ms fadeIn forwards;
+        }
+
+        &__desserts {
+        animation: 2s cubic-bezier(1,.31,.17,1.01) 1500ms fadeIn forwards;
+        }
+    }
+}
+
+.place__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 51px;
+    margin-bottom: 40px;
+    gap: 24px;
+}
+
+.main {
+    border-top-left-radius: 20px;
+    margin: 0 auto;
+
+
+    h2 {
+        font-family: $main-font;
+        font-weight: 400;
+        font-size: 28px;
+        font-style: italic;
+        margin: 0;
+    }
+
+    .image-back {
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 383px;
+        background-position: center;
+        background-size: cover;
+      }
+
+    .palette {
+        background-image: $background-lapalettedugout;
+    }
+    .enchantee {
+        background-image: $background-lanoteenchantee;
+    }
+    .francaise {
+        background-image: $background-alafrancaise;
+    }
+    .delices {
+        background-image: $background-ledelicedessens;
+    }
+}
+
+.menus {
+
+    h3 {
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: .5rem;
+        font-weight: 300;
+        margin: 1.2rem 0;
+        font-size: 1.2rem;
+        padding-left: 9rem;
+
+        @media screen {max-width: 768px;
+            padding-left: 13px;
+        
+            }
+
+        &:after {
+            content: "";
+            background: $second-color;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            left: 9rem;
+            width: 3rem;
+            height: .25rem;
+
+            @media screen {max-width: 768px;
+                left: 13px;
+            
+                }
+        }
+}
+}
+
+.menu {
+    margin: 0 128px 10px 128px;
+
+    @media screen {max-width: 768px;
+        margin: 0px 13px;
+        }
+
+    h1 {
+        padding-top: 31px;
+        padding-bottom: 42px;
+        margin-left: 14px;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin-bottom: 50px;
+        display: flex;
+
+        flex-wrap: wrap;
+
+        li {
+            @include flexColumn;
+            width: 95%;
+            margin-bottom : 15px;
+            margin-top: 12px;
+            padding : 12px 15px;
+            border-radius : 20px;
+            display: flex;
+            position: relative;
+            background-color: #F6F6F6;
+            @include card-shadow;
+            
+        }
+    }
+
+    a {
+        margin-top: 50px;
+        margin : auto;
+        margin-bottom : 50px;
+    }
+
+
+
+    .menu__item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        background: #fff;
+        border-radius: 15px;
+        padding: 12px 0px 12px 15px;
+        overflow: hidden;
+        cursor: pointer;
+        max-width: 100%;
+        margin-bottom: 12px;
+
+        &--text {
+            font-size: 15px;
+            font-weight: 300;
+            flex-grow: 1;
+            flex-shrink: 1;
+            overflow: hidden;
+
+            h4 {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                font-weight: 500;
+                font-size: 18px;
+                margin: 0;
+            }
+
+            .descprice {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                overflow: hidden;
+                margin-top: 0px;
+                margin-bottom: 0px;
+
+                .desc {
+                white-space: nowrap;
+                flex-shrink: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                }
+
+                .price {
+                flex-shrink: 0;
+                font-weight: 700;
+                margin-right: 15px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                }
+            }
+        }
+
+        &--check {
+            background: $second-color;
+            margin: -1rem -5rem -1rem 1rem;
+            width: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-duration: 750ms;
+        }
+
+        &--icon {
+            width: 1.6rem;
+            height: 1.6rem;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6.25rem;
+            transform: rotateZ(360deg);
+            transition-duration: 1250ms;
+
+            i {
+                color: $second-color;
+            }
+        }
+
+        &:hover {
+            .menu__item {
+                &--check {
+                    margin-right: -1px;
+                }
+
+                &--icon {
+                    transform: rotate(0);
+                }
+            }
+        }
+
+        &--price {
+            font-weight: 700;
+            display: flex;
+            align-items: flex-end;
+            width: 100%;
+            justify-content: flex-end;
+            padding-right: 16px;
+            
+        } 
+
+    }
+
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.image--back__index {
+    background-repeat: no-repeat;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 231px;
+    background-size: cover;
+  }
+
+.palette {
+    background-image: $background-lapalettedugout;
+}
+.enchantee {
+    background-image: $background-lanoteenchantee;
+}
+.francaise {
+    background-image: $background-alafrancaise;
+}
+.delices {
+    background-image: $background-ledelicedessens;
+}
