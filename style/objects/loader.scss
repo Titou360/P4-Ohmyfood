@@ -16,7 +16,7 @@
   width: 100%;
   height: 100vh;
   opacity: 1;
-  animation: goodbyeloader 200ms 4000ms forwards;
+  /*animation:good byeloader 200ms 4000ms forwards;*/
 
   &__one, &__two { // variables identiques for group__one & group__two
     @include flexRow;
@@ -53,7 +53,7 @@
 .item__devices::before {
   content: "\f3cd";
   opacity: 0;
-  padding: 2px;
+  padding: 3px;
   animation: fadeInLoader 1s ease-in-out forwards;
   color : $tuto-icon-color;
   
