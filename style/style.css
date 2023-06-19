@@ -41,18 +41,11 @@ a {
   text-decoration: none;
 }
 
-/***** Padding & Margin *****/
+/**** Variables for entiere website ****/ /***** Padding & Margin *****/
 /***** Flex & Grid *****/
 /***** Button  *****/
 /***** Mixin Shadows *****/
-/***** Padding & Margin *****/
-/***** Flex & Grid *****/
-/***** Button  *****/
-/***** Mixin Shadows *****/
-/***** Padding & Margin *****/
-/***** Flex & Grid *****/
-/***** Button  *****/
-/***** Mixin Shadows *****/
+/**** Mixins for entiere website ****/
 /**** Variables for button ****/
 .btn {
   color: white;
@@ -69,8 +62,6 @@ a {
   height: 50px;
   transition: all 0.1s ease-in-out;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 .btn a {
   cursor: pointer;
@@ -86,6 +77,7 @@ a {
   margin: 40px auto;
 }
 
+/**** Variables for button ****/
 /**** Heart of favorites animation *****/
 .card__heart--index, .card__heart--pages {
   width: 22px;
@@ -101,7 +93,7 @@ a {
   margin-right: 25px;
 }
 .card__heart--index--index, .card__heart--pages--index {
-  padding: 23px 250px auto auto;
+  padding: 23px 250px 0 0;
 }
 .card__heart--index--pages, .card__heart--pages--pages {
   margin-left: 120px;
@@ -135,19 +127,19 @@ a {
   padding-left: 24px;
 }
 .card__heart .animation--delay {
-  animation-name: fadein 2s;
+  animation: fadein 2s;
   animation-timing-function: cubic-bezier(0.35, 0.02, 0.71, 1.01);
   animation-fill-mode: both;
   transform: scale(0);
 }
 .card__heart .animation--delay__starters {
-  animation-delay: 250mss;
+  animation-delay: 250ms;
 }
 .card__heart .animation--delay__plates {
-  animation-delay: 750ms;
+  animation-delay: 900ms;
 }
 .card__heart .animation--delay__desserts {
-  animation-delay: 1250msms;
+  animation-delay: 1400ms;
 }
 @keyframes fadein {
   0% {
@@ -158,6 +150,7 @@ a {
   }
 }
 
+/**** Variables for animations ****/
 /*@import "../objects/variables.scss";
 @import "../objects/mixin.scss";*/
 .loader--group {
@@ -185,7 +178,7 @@ a {
   font-size: 30px;
   padding-bottom: 40px;
   opacity: 0;
-  animation: fade-in 2s ease forwards 2s, spin 500ms linear 3150ms forwards;
+  animation: fadeInLoader 2s ease forwards 2s, spin 500ms linear 3150ms forwards;
 }
 .loader--group__two {
   gap: 5px;
@@ -197,18 +190,17 @@ a {
 .load--item {
   border: 3px solid black;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   background-color: rgb(255, 255, 255);
   border-radius: 50px;
   padding: 15px;
+  font-size: 12px;
 }
 
 .item__devices::before {
   content: "\f3cd";
   opacity: 0;
   padding: 2px;
-  animation: fadein 1s ease-in-out forwards;
+  animation: fadeInLoader 1s ease-in-out forwards;
   color: #7E7E7E;
 }
 
@@ -216,21 +208,21 @@ a {
   content: "\f3c5";
   opacity: 0;
   padding: 2px;
-  animation: fade-in 1s ease-in-out forwards;
+  animation: fadeInLoader 1s ease-in-out forwards;
   color: #99E2D0;
 }
 
 .item__store::before {
   content: "\f54e";
   opacity: 0;
-  animation: fade-in 1s ease-in-out forwards;
+  animation: fadeInLoader 1s ease-in-out forwards;
   color: #9356DC;
 }
 
 .item__list::before {
   content: "\f0ca";
   opacity: 0;
-  animation: fade-in 1s ease-in-out forwards;
+  animation: fadeInLoader 1s ease-in-out forwards;
   color: #003A68;
 }
 
@@ -238,7 +230,7 @@ a {
   content: "\f2e7";
   opacity: 0;
   padding: 2px;
-  animation: fade-in 1s ease-in-out forwards;
+  animation: fadeInLoader 1s ease-in-out forwards;
   color: #FF79DA;
 }
 
@@ -246,19 +238,19 @@ a {
   height: 200px;
 }
 .slide--delay__1000 {
-  animation: fade-in 1s ease-in-out forwards, slideFromBottom 1s cubic-bezier(0.65, -0.18, 0.35, 1.56), spin 1s linear 1s forwards;
+  animation: fadeInLoader 1s ease-in-out forwards, slideFromBottom 1s cubic-bezier(0.65, -0.18, 0.35, 1.56), spin 1s linear 1s forwards;
 }
 .slide--delay__1250 {
-  animation: fade-in 1s ease-in-out forwards, slideFromBottom 1s cubic-bezier(0.65, -0.18, 0.35, 1.56) 250ms, spin 1s linear 1250ms forwards, spin-delayed 1s linear 1600ms forwards;
+  animation: fadeInLoader 1s ease-in-out forwards, slideFromBottom 1s cubic-bezier(0.65, -0.18, 0.35, 1.56) 250ms, spin 1s linear 1250ms forwards, spin-delayed 1s linear 1600ms forwards;
 }
 .slide--delay__1500 {
-  animation: fade-in 1s ease-in-out forwards, slideFromBottom 1000ms cubic-bezier(0.65, -0.18, 0.35, 1.56) 500ms, spin 1s linear 1500ms forwards, spin-delayed 1s linear 2400ms forwards;
+  animation: fadeInLoader 1s ease-in-out forwards, slideFromBottom 1000ms cubic-bezier(0.65, -0.18, 0.35, 1.56) 500ms, spin 1s linear 1500ms forwards, spin-delayed 1s linear 2400ms forwards;
 }
 .slide--delay__1750 {
-  animation: fade-in 1s ease-in-out forwards, slideFromBottom 1000ms cubic-bezier(0.65, -0.18, 0.35, 1.56) 750ms, spin 1s linear 1750ms forwards, spin-delayed 1s linear 3000ms forwards;
+  animation: fadeInLoader 1s ease-in-out forwards, slideFromBottom 1000ms cubic-bezier(0.65, -0.18, 0.35, 1.56) 750ms, spin 1s linear 1750ms forwards, spin-delayed 1s linear 3000ms forwards;
 }
 .slide--delay__2000 {
-  animation: fade-in 1s ease-in-out forwards, slideFromBottom 1000ms cubic-bezier(0.65, -0.18, 0.35, 1.56) 1000ms, spin 1s linear 2s forwards, spin-delayed 1s linear 3800ms forwards;
+  animation: fadeInLoader 1s ease-in-out forwards, slideFromBottom 1000ms cubic-bezier(0.65, -0.18, 0.35, 1.56) 1000ms, spin 1s linear 2s forwards, spin-delayed 1s linear 3800ms forwards;
 }
 
 @keyframes slideFromBottom {
@@ -269,7 +261,7 @@ a {
     transform: translateY(0);
   }
 }
-@keyframes fade-in {
+@keyframes fadeInLoader {
   0% {
     opacity: 0;
   }
@@ -296,10 +288,9 @@ a {
     transform: scale(0);
   }
 }
+/**** Variables for loader ****/
 .header {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -335,6 +326,74 @@ a {
 }
 
 /**** Variables for header ****/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #353535;
+  color: #ffffff;
+  padding-left: 50px;
+}
+footer .footer--logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+footer a {
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+footer a:visited {
+  color: #ffffff;
+}
+footer ul {
+  padding-bottom: 22px;
+  font-size: 16px;
+  font-weight: 500;
+  list-style-type: none;
+}
+footer ul li {
+  padding: 0 0 7px 0;
+}
+footer ul li i {
+  padding-right: 10px;
+}
+footer .box-footer-media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer .box-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+}
+footer .fa-utensils::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f2e7";
+}
+footer .fa-handshake-angle::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f4c4";
+}
+footer .footer--partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 7px;
+}
+
+/**** Variables for footer ****/
+/**** Background for restaurant card ****/
 .place__menu {
   margin-top: -80px;
   border-radius: 25px 25px 0 0;
@@ -449,8 +508,6 @@ a {
   position: relative;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .menu a {
   margin-top: 50px;
@@ -579,72 +636,60 @@ a {
   background-image: url(../assets/images/restaurants/le_delices_des_sens.jpg);
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: #353535;
-  color: #ffffff;
-  padding-left: 50px;
+/**** Variables for restaurant pages ****/
+/*** Media Queries Loader ***/
+@media screen and (min-width: 768px) {
+  .loader--group__one {
+    font-size: 40px;
+  }
+  .loader--group__two {
+    gap: 30px;
+    font-size: 50px;
+  }
+  .item__devices::before, .item__location::before, .item__ustensils::before {
+    padding: 5px;
+  }
 }
-footer .footer--logo {
-  font-family: "Shrikhand", cursive;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 26px;
-  font-style: italic;
-  display: flex;
-  align-items: center;
+/*** Media Queries Index ***/
+@media screen and (min-width: 768px) {
+  main .places .restaurants-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
-footer a {
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 400;
+/*** Media Queries index : Tutorial ***/
+@media screen and (min-width: 768px) {
+  main .tutorial .container ul {
+    display: flex;
+    flex-flow: row nowrap;
+  }
 }
-footer a:visited {
-  color: #ffffff;
+/*** Media Queries Restaurant pages ***/
+@media screen and (min-width: 768px) {
+  .place__menu {
+    width: 80%;
+  }
 }
-footer ul {
-  padding-bottom: 22px;
-  font-size: 16px;
-  font-weight: 500;
-  list-style-type: none;
+/*** Media Queries Footer  ***/
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 64px 26px 34px;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 16px;
+  }
+  footer .box-footer-media {
+    flex-direction: row;
+    gap: 16px;
+  }
+  footer .footer--partners {
+    flex-direction: row;
+  }
+  footer ul {
+    padding-bottom: 0px;
+  }
 }
-footer ul li {
-  padding: 0 0 7px 0;
-}
-footer ul li i {
-  padding-right: 10px;
-}
-footer .box-footer-media {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-footer .box-footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 7px;
-}
-footer .fa-utensils::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f2e7";
-}
-footer .fa-handshake-angle::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f4c4";
-}
-footer .footer--partners {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 7px;
-}
-
+/**** Variables for Media Queries ****/
 /**** Variables for "location class" area ****/
 .location-form {
   display: flex;
@@ -745,8 +790,6 @@ footer .footer--partners {
   flex-wrap: nowrap;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   align-items: center;
 }
 .tutorial .container ul li:nth-child(3) i {
@@ -754,8 +797,6 @@ footer .footer--partners {
 }
 .tutorial .container ul li:hover {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .tutorial .container ul li:hover i {
   color: #9356DC;
@@ -811,16 +852,12 @@ footer .footer--partners {
 }
 .places .restaurants-list__item:hover {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .places .restaurant-card {
   background-color: #ffffff;
   border-radius: 25px;
   position: relative;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .places .restaurant-card__footer {
   display: flex;

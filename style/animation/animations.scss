@@ -12,7 +12,7 @@
   margin-right: 25px;
 
   &--index {
-    padding : 23px 250px auto auto;
+    padding : 23px 250px 0 0;
   }
 
   &--pages {
@@ -54,22 +54,22 @@
 }
 
 .animation--delay {
-  animation-name: fadein 2s;
+  animation: fadein 2s;
   animation-timing-function: cubic-bezier(.35,.02,.71,1.01);
   animation-fill-mode: both;
   transform: scale(0);
  
   
   &__starters {
-    animation-delay: 250mss;
+    animation-delay: 250ms;
   }
 
   &__plates {
-    animation-delay: 750ms;
+    animation-delay: 900ms;
   }
 
   &__desserts {
-    animation-delay: 1250msms;
+    animation-delay: 1400ms;
   }
 
 }

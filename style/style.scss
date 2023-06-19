@@ -1,11 +1,13 @@
-@import "./objects/variables.scss"; //OUI
-@import "./objects/mixin.scss"; //OUI
-@import "./objects/button.scss";
-@import "./animation/animations.scss"; 
-@import "./objects/loader.scss";
+@import "./objects/variables.scss"; /**** Variables for entiere website ****/
+@import "./objects/mixin.scss"; /**** Mixins for entiere website ****/
+@import "./objects/button.scss"; /**** Variables for button ****/
+@import "./animation/animations.scss"; /**** Variables for animations ****/
+@import "./objects/loader.scss"; /**** Variables for loader ****/
 @import "./objects/header.scss"; /**** Variables for header ****/
-@import "./pages/restaurants.scss"; //OUI
-@import "./objects/footer.scss";
+@import "./objects/footer.scss"; /**** Variables for footer ****/
+@import "./pages/restaurants.scss"; /**** Variables for restaurant pages ****/
+@import "./mediaqueries/mediaqueries.scss"; /**** Variables for Media Queries ****/
+
 
 
 /**** Variables for "location class" area ****/
