@@ -166,7 +166,7 @@ a {
   width: 100%;
   height: 100vh;
   opacity: 1;
-  animation: good byeloader 200ms 4000ms forwards;
+  animation: goodbyeloader 200ms 4000ms forwards;
 }
 .loader--group__one, .loader--group__two {
   display: flex;
