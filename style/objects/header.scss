@@ -1,0 +1,38 @@
+.header {
+    @include heading-shadow;
+    @include flexMid;
+    padding: 8px;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+
+    &--iconGoback::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f060";
+        width: 17px;
+        height: 16px;
+        color : $footer-BG-color;
+        font-size: 17px;
+        left: 20%;
+        top: 20%;
+    }
+
+    &--logo {
+        font-family: $main-font;
+        font-size: 32px;
+        font-weight: 500;
+        margin : 0 auto;
+        font-style: italic;
+        color: $main-title-color;
+        margin: 14px auto 5px auto;
+
+        &__svg {
+            width: 200px;
+            height: 34px;
+            margin: 30px auto;
+        }
+    }
+    
+}
+

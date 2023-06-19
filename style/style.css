@@ -5,10 +5,6 @@
 /*** Icon colour ***/
 /*** Others Colours ***/
 /*** Main variables of Website ***/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Shrikhand&display=swap");
 html, body {
   width: 100%;
   margin: 0;
@@ -53,46 +49,41 @@ a {
 /***** Flex & Grid *****/
 /***** Button  *****/
 /***** Mixin Shadows *****/
-/* Define standard variables and values for website */
-/*** Fonts ***/
-/*** Website main Colours ***/
-/*** Icon colour ***/
-/*** Others Colours ***/
-/*** Main variables of Website ***/
-html, body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+/***** Padding & Margin *****/
+/***** Flex & Grid *****/
+/***** Button  *****/
+/***** Mixin Shadows *****/
+/**** Variables for button ****/
+.btn {
+  color: white;
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(93deg, #9356DC -11%, #FF79DA 123%); /* fallback for old browsers + W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: -webkit-linear-gradient(93deg, #9356DC -11%, #FF79DA 123%);
+  transform: matrix(1, 0, 0, 1, 0, 0); /* Chrome 10-25, Safari 5.1-6 */
+  border-radius: 25px;
+  width: 230px;
+  height: 50px;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.btn a {
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.btn__cards {
+  padding: 0.5rem 0;
 }
 
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  color: #000000;
-  margin: 0px;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 50px;
-  margin-bottom: 0px;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-ul li {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
+.btn-order {
+  margin: 40px auto;
 }
 
 /**** Heart of favorites animation *****/
@@ -167,52 +158,8 @@ a {
   }
 }
 
-/* Define standard variables and values for website */
-/*** Fonts ***/
-/*** Website main Colours ***/
-/*** Icon colour ***/
-/*** Others Colours ***/
-/*** Main variables of Website ***/
-html, body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  color: #000000;
-  margin: 0px;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 50px;
-  margin-bottom: 0px;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-ul li {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-/***** Padding & Margin *****/
-/***** Flex & Grid *****/
-/***** Button  *****/
-/***** Mixin Shadows *****/
+/*@import "../objects/variables.scss";
+@import "../objects/mixin.scss";*/
 .loader--group {
   z-index: 5;
   position: fixed;
@@ -349,116 +296,53 @@ a {
     transform: scale(0);
   }
 }
-/*** Media Queries Loader ***/
-@media screen and (min-width: 768px) {
-  .loader--group__one {
-    font-size: 40px;
-  }
-  .loader--group__two {
-    gap: 30px;
-    font-size: 50px;
-  }
-  .item__devices::before, .item__location::before, .item__ustensils::before {
-    padding: 5px;
-  }
+.header {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1;
 }
-/*** Media Queries Index ***/
-@media screen and (min-width: 768px) {
-  main .places .restaurants-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+.header--iconGoback::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f060";
+  width: 17px;
+  height: 16px;
+  color: #353535;
+  font-size: 17px;
+  left: 20%;
+  top: 20%;
 }
-/*** Media Queries index : Tutorial ***/
-@media screen and (min-width: 768px) {
-  main .tutorial .container ul {
-    display: flex;
-    flex-flow: row nowrap;
-  }
+.header--logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 auto;
+  font-style: italic;
+  color: #101010;
+  margin: 14px auto 5px auto;
 }
-/*** Media Queries Restaurant pages ***/
-/*** Media Queries Footer  ***/
-@media screen and (min-width: 768px) {
-  footer {
-    display: flex;
-    flex-direction: row;
-  }
-  footer a {
-    padding-top: 7px;
-  }
-}
-.box-footer-media {
-  flex-direction: row;
+.header--logo__svg {
+  width: 200px;
+  height: 34px;
+  margin: 30px auto;
 }
 
-.footer--partners {
-  flex-direction: row;
-}
-
-/***** Padding & Margin *****/
-/***** Flex & Grid *****/
-/***** Button  *****/
-/***** Mixin Shadows *****/
-/* Define standard variables and values for website */
-/*** Fonts ***/
-/*** Website main Colours ***/
-/*** Icon colour ***/
-/*** Others Colours ***/
-/*** Main variables of Website ***/
-html, body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  color: #000000;
-  margin: 0px;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 50px;
-  margin-bottom: 0px;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-ul li {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-/***** Padding & Margin *****/
-/***** Flex & Grid *****/
-/***** Button  *****/
-/***** Mixin Shadows *****/
+/**** Variables for header ****/
 .place__menu {
-  margin-top: -5rem;
-  border-radius: 2rem 2rem 0 0;
+  margin-top: -80px;
+  border-radius: 25px 25px 0 0;
   background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
-  width: 75%;
-  margin: -5rem auto auto auto;
-}
-@media screen {
-  .place__menu {
-    max-width: 768px;
-    width: 100%;
-  }
+  margin: -80px auto auto auto;
+  width: 100%;
 }
 .place__menu .animation--delay {
   opacity: 0;
@@ -514,20 +398,18 @@ a {
   background-image: url(../assets/images/restaurants/le_delices_des_sens.jpg);
 }
 
+.menus {
+  padding-left: 13px;
+  padding-right: 13px;
+}
 .menus h3 {
   text-transform: uppercase;
   position: relative;
-  padding-bottom: 0.5rem;
+  padding-bottom: 8px;
   font-weight: 300;
-  margin: 1.2rem 0;
-  font-size: 1.2rem;
-  padding-left: 9rem;
-}
-@media screen {
-  .menus h3 {
-    max-width: 768px;
-    padding-left: 13px;
-  }
+  margin: 19px 0;
+  font-size: 19px;
+  padding-left: 13px;
 }
 .menus h3:after {
   content: "";
@@ -535,25 +417,13 @@ a {
   position: absolute;
   left: 0;
   bottom: 0;
-  left: 9rem;
-  width: 3rem;
-  height: 0.25rem;
-}
-@media screen {
-  .menus h3:after {
-    max-width: 768px;
-    left: 13px;
-  }
+  left: 13px;
+  width: 48px;
+  height: 4px;
 }
 
 .menu {
-  margin: 0 128px 10px 128px;
-}
-@media screen {
-  .menu {
-    max-width: 768px;
-    margin: 0px 13px;
-  }
+  margin: 0 auto;
 }
 .menu h1 {
   padding-top: 31px;
@@ -640,21 +510,21 @@ a {
 }
 .menu .menu__item--check {
   background: #99E2D0;
-  margin: -1rem -5rem -1rem 1rem;
-  width: 4rem;
+  margin: -16px -80px -16px 20px;
+  width: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition-duration: 750ms;
 }
 .menu .menu__item--icon {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 25px;
+  height: 25px;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 6.25rem;
+  border-radius: 100px;
   transform: rotateZ(360deg);
   transition-duration: 1250ms;
 }
@@ -709,122 +579,70 @@ a {
   background-image: url(../assets/images/restaurants/le_delices_des_sens.jpg);
 }
 
-/***** Padding & Margin *****/
-/***** Flex & Grid *****/
-/***** Button  *****/
-/***** Mixin Shadows *****/
-/* Define standard variables and values for website */
-/*** Fonts ***/
-/*** Website main Colours ***/
-/*** Icon colour ***/
-/*** Others Colours ***/
-/*** Main variables of Website ***/
-html, body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  color: #000000;
-  margin: 0px;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 50px;
-  margin-bottom: 0px;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-ul li {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-/**** Variables for button ****/
-.btn {
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
+footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(93deg, #9356DC -11%, #FF79DA 123%); /* fallback for old browsers + W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-image: -webkit-linear-gradient(93deg, #9356DC -11%, #FF79DA 123%);
-  transform: matrix(1, 0, 0, 1, 0, 0); /* Chrome 10-25, Safari 5.1-6 */
-  border-radius: 25px;
-  width: 230px;
-  height: 50px;
-  transition: all 0.1s ease-in-out;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #353535;
+  color: #ffffff;
+  padding-left: 50px;
 }
-.btn a {
+footer .footer--logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+footer a {
   cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
 }
-.btn:hover {
-  opacity: 0.8;
+footer a:visited {
+  color: #ffffff;
 }
-.btn__cards {
-  padding: 0.5rem 0;
+footer ul {
+  padding-bottom: 22px;
+  font-size: 16px;
+  font-weight: 500;
+  list-style-type: none;
 }
-
-.btn-order {
-  margin: 40px auto;
+footer ul li {
+  padding: 0 0 7px 0;
 }
-
-/**** Variables for header ****/
-.header {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+footer ul li i {
+  padding-right: 10px;
+}
+footer .box-footer-media {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-  background-color: #ffffff;
-  position: relative;
-  z-index: 1;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.header--iconGoback::before {
+footer .box-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+}
+footer .fa-utensils::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  content: "\f060";
-  width: 17px;
-  height: 16px;
-  color: #353535;
-  font-size: 17px;
-  left: 20%;
-  top: 20%;
+  content: "\f2e7";
 }
-.header--logo {
-  font-family: "Shrikhand", cursive;
-  font-size: 2rem;
-  font-weight: 500;
-  margin: 0 auto;
-  font-style: italic;
-  color: #101010;
-  margin: 14px auto 5px auto;
+footer .fa-handshake-angle::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f4c4";
 }
-.header--logo__svg {
-  width: 200px;
-  height: 34px;
-  margin: 30px auto;
+footer .footer--partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 7px;
 }
 
 /**** Variables for "location class" area ****/
@@ -862,7 +680,7 @@ a {
 
 .booking {
   background-color: #f7f7f7;
-  padding: 2rem;
+  padding: 32px;
 }
 .booking p {
   font-weight: 300;
@@ -893,12 +711,12 @@ a {
     @include flexMid;
     background-color: #EAEAEA;
     position: relative;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
-    padding: 1rem;
+    padding: 16px;
 
     .location__icon {
-        margin: 0 1rem 0 0;
+        margin: 0 16px 0 0;
     }
 }*/
 /**** Variables for "tutorial class" area ****/
@@ -1031,8 +849,8 @@ a {
   position: absolute;
   background: #99E2D0;
   color: #008766;
-  top: 1rem;
-  right: 1rem;
+  top: 16px;
+  right: 16px;
   width: 80px;
   height: 29px;
   display: flex;
@@ -1046,78 +864,10 @@ a {
 .places img {
   width: 100%;
   height: 231px;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 16px 16px 0 0;
   object-fit: cover;
 }
 
 /**** Variables for Footer ****/
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: #353535;
-  color: #ffffff;
-  padding-left: 50px;
-}
-footer .footer--logo {
-  font-family: "Shrikhand", cursive;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 26px;
-  font-style: italic;
-  display: flex;
-  align-items: center;
-}
-footer a {
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 400;
-}
-footer a:visited {
-  color: #ffffff;
-}
-footer ul {
-  padding-bottom: 22px;
-  font-size: 16px;
-  font-weight: 500;
-  list-style-type: none;
-}
-footer ul li {
-  padding: 0 0 7px 0;
-}
-footer ul li i {
-  padding-right: 10px;
-}
-footer .box-footer-media {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-footer .box-footer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 7px;
-}
-footer .fa-utensils::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f2e7";
-}
-footer .fa-handshake-angle::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f4c4";
-}
-footer .footer--partners {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 7px;
-}
-footer .footer--partners div {
-  padding-right: 0.5rem;
-}
 
 /*# sourceMappingURL=style.css.map */

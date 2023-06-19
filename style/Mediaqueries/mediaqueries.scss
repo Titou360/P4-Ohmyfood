@@ -1,0 +1,69 @@
+/*** Media Queries Loader ***/
+
+@media screen and (min-width: 768px) {
+    .loader--group {
+
+        &__one { // variables identiques for group__one
+           font-size: 40px;
+        }
+      
+        &__two { // variables identiques for group__two
+          gap: 30px;
+           font-size: 50px;
+        }
+      }
+      
+      .item__devices::before, .item__location::before, .item__ustensils::before {
+          padding: 5px;  
+        }
+}
+
+/*** Media Queries Index ***/
+
+@media screen and (min-width: 768px) {
+    main .places .restaurants-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+
+/*** Media Queries index : Tutorial ***/
+
+@media screen and (min-width: 768px) {
+    main .tutorial .container ul {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+}
+
+/*** Media Queries Restaurant pages ***/
+
+@media screen and (min-width: 768px) {
+    .place__menu {
+    width: 80%;
+    }
+}
+
+
+/*** Media Queries Footer  ***/
+
+@media screen and (min-width: 768px) {
+
+footer {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+
+    a {
+    padding-top: 7px;
+    }
+}
+
+}
+
+    .box-footer-media { 
+      flex-direction: row;
+    }
+
+    .footer--partners {
+        flex-direction: row;
+    }
