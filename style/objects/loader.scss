@@ -16,7 +16,7 @@
   width: 100%;
   height: 100vh;
   opacity: 1;
-  /*animation:good byeloader 200ms 4000ms forwards;*/
+  animation:good byeloader 200ms 4000ms forwards;
 
   &__one, &__two { // variables identiques for group__one & group__two
     @include flexRow;
