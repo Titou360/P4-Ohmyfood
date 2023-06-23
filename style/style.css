@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Define standard variables and values for website */
 /*** Fonts ***/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Shrikhand&display=swap");
@@ -106,14 +107,6 @@ a {
 }
 .card__heart--index .fa-solid, .card__heart--pages .fa-solid {
   opacity: 0;
-  /*&:active { If you want to display heart animation by clicking
-      opacity: 1;
-      background: linear-gradient(0deg,$main-color,$sixth-color);
-      transition: all 0.5s;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-  }*/
 }
 .card__heart--index .fa-solid:hover, .card__heart--pages .fa-solid:hover { /*If you want to display heart animation by hovering */
   opacity: 1;
@@ -122,6 +115,9 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.card__heart--index .fa-solid:not(:hover), .card__heart--pages .fa-solid:not(:hover) {
+  transition-delay: 0.5s ease-in-out; /* Délai de 0.5s pour la transition inverse */
 }
 .card__heart--index--menu, .card__heart--pages--menu {
   padding-left: 24px;
@@ -289,27 +285,19 @@ a {
   }
 }
 /**** Variables for loader ****/
-.header {
+header {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 8px;
   background-color: #ffffff;
   position: relative;
   z-index: 1;
 }
-.header--iconGoback::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f060";
-  width: 17px;
-  height: 16px;
-  color: #353535;
-  font-size: 17px;
-  left: 20%;
-  top: 20%;
+header a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+
 .header--logo {
   font-family: "Shrikhand", cursive;
   font-size: 32px;
@@ -319,10 +307,17 @@ a {
   color: #101010;
   margin: 14px auto 5px auto;
 }
-.header--logo__svg {
-  width: 200px;
-  height: 34px;
-  margin: 30px auto;
+
+.fa-arrow-left {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f060";
+  width: 17px;
+  height: 16px;
+  color: #353535;
+  font-size: 17px;
+  left: 20%;
+  top: 20%;
 }
 
 /**** Variables for header ****/
@@ -404,16 +399,18 @@ footer .footer--partners {
   width: 100%;
 }
 .place__menu .animation--delay {
-  opacity: 0;
   /* @keyframes fadeIn duration | timing-function | delay | name */
 }
 .place__menu .animation--delay__starters {
+  opacity: 0;
   animation: 2s cubic-bezier(1, 0.31, 0.17, 1.01) 500ms fadeIn forwards;
 }
 .place__menu .animation--delay__plates {
+  opacity: 0;
   animation: 2s cubic-bezier(1, 0.31, 0.17, 1.01) 1000ms fadeIn forwards;
 }
 .place__menu .animation--delay__desserts {
+  opacity: 0;
   animation: 2s cubic-bezier(1, 0.31, 0.17, 1.01) 1500ms fadeIn forwards;
 }
 
@@ -430,12 +427,34 @@ footer .footer--partners {
   border-top-left-radius: 20px;
   margin: 0 auto;
 }
-.main h2 {
+.main h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-size: 28px;
   font-style: italic;
   margin: 0;
+}
+.main h2 {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 8px;
+  font-weight: 300;
+  margin: 19px 0;
+  font-size: 19px;
+  padding-left: 13px;
+}
+.main h2:after {
+  content: "";
+  background: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  left: 13px;
+  width: 48px;
+  height: 4px;
+}
+.main h2 h3 {
+  padding-bottom: 8px;
 }
 .main .image-back {
   background-repeat: no-repeat;
@@ -461,33 +480,21 @@ footer .footer--partners {
   padding-left: 13px;
   padding-right: 13px;
 }
-.menus h3 {
-  text-transform: uppercase;
-  position: relative;
-  padding-bottom: 8px;
-  font-weight: 300;
-  margin: 19px 0;
-  font-size: 19px;
-  padding-left: 13px;
-}
-.menus h3:after {
-  content: "";
-  background: #99E2D0;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  left: 13px;
-  width: 48px;
-  height: 4px;
-}
 
-.menu {
-  margin: 0 auto;
-}
 .menu h1 {
   padding-top: 31px;
   padding-bottom: 42px;
   margin-left: 14px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0px;
+}
+.menu h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
 }
 .menu ul {
   list-style-type: none;
@@ -884,7 +891,5 @@ footer .footer--partners {
   border-radius: 16px 16px 0 0;
   object-fit: cover;
 }
-
-/**** Variables for Footer ****/
 
 /*# sourceMappingURL=style.css.map */

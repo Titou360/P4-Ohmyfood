@@ -30,16 +30,8 @@
   .fa-solid {
       opacity: 0;
 
-      /*&:active { If you want to display heart animation by clicking
-          opacity: 1;
-          background: linear-gradient(0deg,$main-color,$sixth-color);
-          transition: all 0.5s;
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-      }*/
 
-      &:hover { /*If you want to display heart animation by hovering */
+     &:hover { /*If you want to display heart animation by hovering */
           opacity: 1;
           background: linear-gradient(0deg,$main-color,$sixth-color);
           transition: all 0.5s;
@@ -47,6 +39,10 @@
           background-clip: text;
           -webkit-text-fill-color: transparent;
       }
+
+      &:not(:hover) {
+        transition-delay: 0.5s ease-in-out; /* Délai de 0.5s pour la transition inverse */
+    }
   }
   &--menu {
     padding-left: 24px;
