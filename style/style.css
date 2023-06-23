@@ -664,17 +664,45 @@ footer .footer--partners {
     grid-template-columns: 1fr 1fr;
   }
 }
+@media screen and (min-width: 1441px) {
+  main .places .restaurants-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+  }
+}
 /*** Media Queries index : Tutorial ***/
 @media screen and (min-width: 768px) {
-  main .tutorial .container ul {
+  main .tutorial .tutorial--ulist {
     display: flex;
     flex-flow: row nowrap;
+    align-items: stretch;
+  }
+  main .tutorial .tutorial--ulist li {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1441px) {
+  main .tutorial .tutorial--ulist {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
   }
 }
 /*** Media Queries Restaurant pages ***/
 @media screen and (min-width: 768px) {
   .place__menu {
     width: 80%;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .menus {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .menu {
+    width: 30%;
   }
 }
 /*** Media Queries Footer  ***/
@@ -738,6 +766,7 @@ footer .footer--partners {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  text-align: center;
 }
 .booking p {
   font-weight: 300;
@@ -746,7 +775,7 @@ footer .footer--partners {
 }
 
 /**** Variables for "main-container id" area ****/
-#main-container {
+#main-container-index {
   width: 100%;
   margin: auto 0;
 }
@@ -757,38 +786,34 @@ footer .footer--partners {
   width: 90%;
   padding-bottom: 68px;
 }
-.tutorial .container {
-  margin: 0 auto;
-}
-.tutorial .container ul {
+.tutorial--ulist {
   list-style-type: none;
   counter-reset: ListingCounter;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-around;
   flex-direction: column;
   gap: 50px;
   padding-top: 24px;
 }
-.tutorial .container ul li {
-  padding: 24px 24px 20px;
+.tutorial--ulist li {
+  padding: 24px 32px 20px;
   border-radius: 25px;
   display: flex;
   flex-wrap: nowrap;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  align-items: center;
 }
-.tutorial .container ul li:nth-child(3) i {
+.tutorial--ulist li:nth-child(3) i {
   color: #9356DC;
 }
-.tutorial .container ul li:hover {
+.tutorial--ulist li:hover {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
-.tutorial .container ul li:hover i {
+.tutorial--ulist li:hover i {
   color: #9356DC;
 }
-.tutorial .container ul li::before {
+.tutorial--ulist li::before {
   counter-increment: ListingCounter 1;
   content: counter(ListingCounter);
   display: flex;
@@ -801,13 +826,13 @@ footer .footer--partners {
   height: 15px;
   padding: 5px;
   position: relative;
-  left: -30px;
+  left: -45px;
 }
-.tutorial .container ul li i {
+.tutorial--ulist li i {
   color: #7E7E7E;
   padding-right: 15px;
 }
-.tutorial .container ul li span {
+.tutorial--ulist li span {
   font-weight: 500;
 }
 
