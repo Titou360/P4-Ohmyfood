@@ -726,21 +726,15 @@ footer .footer--partners {
 .booking {
   background-color: #f7f7f7;
   padding: 32px;
-}
-.booking p {
-  font-weight: 300;
-  font-size: 18px;
-  text-align: center;
-}
-.booking__ul {
-  list-style-type: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
 }
-.booking__ul li {
+.booking p {
+  font-weight: 300;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -750,20 +744,6 @@ footer .footer--partners {
   margin: auto 0;
 }
 
-/*#main-container {
-
-    .location { /* Switch on this option if you want just a town display and no a form be careful with the html :)/*
-    @include flexMid;
-    background-color: #EAEAEA;
-    position: relative;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 16px;
-
-    .location__icon {
-        margin: 0 16px 0 0;
-    }
-}*/
 /**** Variables for "tutorial class" area ****/
 .tutorial {
   margin: 0 auto;

@@ -8,13 +8,13 @@
         }
       
         &__two { // variables identiques for group__two
-          gap: 30px;
-           font-size: 50px;
+            gap: 30px;
+            font-size: 50px;
         }
       }
       
       .item__devices::before, .item__location::before, .item__ustensils::before {
-          padding: 5px;  
+          padding: 3px;  
         }
 }
 
@@ -49,21 +49,24 @@
 
 @media screen and (min-width: 768px) {
 
-footer {
+    footer {
+        padding: 64px 26px 34px;
         flex-direction: row-reverse;
-        align-items: flex-end;
+        align-items: center;
+        gap : 16px;
 
-    a {
-    padding-top: 7px;
+
+        .box-footer-media { 
+            flex-direction: row;
+            gap: 16px;
+        }
+
+        .footer--partners {
+            flex-direction: row;
+        }
+
+        ul {
+            padding-bottom: 0px;
+        }
     }
 }
-
-}
-
-    .box-footer-media { 
-      flex-direction: row;
-    }
-
-    .footer--partners {
-        flex-direction: row;
-    }

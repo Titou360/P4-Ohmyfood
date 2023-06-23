@@ -40,30 +40,20 @@
 .bold-700 {
     font-weight: 700;
 }
+
 .booking {
     background-color: #f7f7f7;
-    padding: 32px; 
+    padding: 32px;
+    @include flexColumn;
+    align-items: center; 
+    gap : 30px;
 
     p {
         font-weight: 300;
         font-size: 18px;
         text-align: center
     }
-    &__ul {
-        list-style-type: none;
-        @include flexColumn;
-        align-items: center;
-        gap: 30px;
-
-        li {
-            text-align: center;
-        }
-    }
-
 }
-
-
-
 
 
 
@@ -73,22 +63,6 @@
     width: 100%;
     margin: auto 0;
 }
-
-/*#main-container {
-
-    .location { /* Switch on this option if you want just a town display and no a form be careful with the html :)/*
-    @include flexMid;
-    background-color: #EAEAEA;
-    position: relative;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 16px;
-
-    .location__icon {
-        margin: 0 16px 0 0;
-    }
-}*/
-
 
 /**** Variables for "tutorial class" area ****/
     .tutorial {
