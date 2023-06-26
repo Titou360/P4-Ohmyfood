@@ -29,6 +29,10 @@
 
   .fa-solid {
       opacity: 0;
+      -webkit-text-fill-color: transparent; 
+      color: transparent;
+      background: linear-gradient(0deg,$main-color,$sixth-color);
+      
 
 
      &:hover { /*If you want to display heart animation by hovering */
@@ -40,9 +44,12 @@
           -webkit-text-fill-color: transparent;
       }
 
-      &:not(:hover) {
-        transition-delay: 0.5s ease-in-out; /* Délai de 0.5s pour la transition inverse */
-    }
+      transition: all 0.5s;
+      transition-delay: 0.1s;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
   }
   &--menu {
     padding-left: 24px;
