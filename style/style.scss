@@ -162,7 +162,16 @@
                 &:hover {
                 @include card-shadow;
             }
+
+            a {
+                color: $main-title-color;
+                
+                &:visited {
+                    color: $main-title-color;
+                }
+              }
             }
+
 
         }
 

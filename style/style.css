@@ -115,7 +115,7 @@ a {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.card__heart--index .fa-solid:hover, .card__heart--pages .fa-solid:hover { /*If you want to display heart animation by hovering */
+.card__heart--index .fa-solid:hover, .card__heart--pages .fa-solid:hover {
   opacity: 1;
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   transition: all 0.5s;
@@ -878,6 +878,12 @@ footer .footer--partners {
 }
 .places .restaurants-list__item:hover {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.places .restaurants-list__item a {
+  color: #101010;
+}
+.places .restaurants-list__item a:visited {
+  color: #101010;
 }
 .places .restaurant-card {
   background-color: #ffffff;
