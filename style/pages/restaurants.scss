@@ -38,7 +38,7 @@
     gap: 24px;
 }
 
-.main {
+#main-restaurant-pages {
     border-top-left-radius: 20px;
     margin: 0 auto;
 
@@ -74,7 +74,7 @@
 
         h3 {
             padding-bottom: 8px;
-    }
+        }
     }
 
     .image-back {
@@ -207,6 +207,13 @@
                 margin-right: 15px;
                 margin-top: 0px;
                 margin-bottom: 0px;
+                }
+            }
+            a {
+                color: $main-title-color;
+                
+                &:visited {
+                    color: $main-title-color;
                 }
             }
         }
