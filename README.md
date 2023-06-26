@@ -1,5 +1,5 @@
 Nom de l'élève : Clément FELICES
-Formation : Développeur Web
+Formation : Intégrateur Web
 École : OpenClassRooms
 Promotion : 2023
 
