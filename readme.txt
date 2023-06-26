@@ -11,5 +11,3 @@ Projet 4 : Améliorez l'interface d'un site mobile avec des animations CSS (ohmy
 Adresse du repo Github : https://github.com/Titou360/P4-Ohmyfood
 
 Adresse du Github pages : https://titou360.github.io/P4-Ohmyfood/
-
-![capture](assets/images/capture/Capture.png)
