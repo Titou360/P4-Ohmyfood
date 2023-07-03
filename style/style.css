@@ -546,7 +546,7 @@ footer .footer--partners {
   flex-shrink: 1;
   overflow: hidden;
 }
-.menu .menu__item--text h4 {
+.menu .menu__item--text h3 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
