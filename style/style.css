@@ -80,6 +80,9 @@ a {
 
 /**** Variables for button ****/
 /**** Heart of favorites animation *****/
+.card__heart {
+  /**** Menu delay animation *****/
+}
 .card__heart--index, .card__heart--pages {
   width: 22px;
   height: 21px;
@@ -152,8 +155,6 @@ a {
 }
 
 /**** Variables for animations ****/
-/*@import "../objects/variables.scss";
-@import "../objects/mixin.scss";*/
 .loader--group {
   z-index: 5;
   position: fixed;
@@ -805,7 +806,6 @@ footer .footer--partners {
   list-style-type: none;
   counter-reset: ListingCounter;
   display: flex;
-  align-items: center;
   justify-content: space-around;
   flex-direction: column;
   gap: 50px;
