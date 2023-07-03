@@ -199,7 +199,7 @@ a {
 }
 
 .item__devices::before {
-  content: "\f3cd";
+  content: "";
   opacity: 0;
   padding: 3px;
   animation: fadeInLoader 1s ease-in-out forwards;
